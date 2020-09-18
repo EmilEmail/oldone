@@ -67,6 +67,15 @@ p {
     font-size: 12px;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(169, 161, 158);
+}
+
+a:hover {
+    color: black;
+}
+
 .card-heading {
     text-align: center;
     padding: 0;
@@ -93,18 +102,14 @@ body {
     margin: auto;
 }
 
-.flexcenter {
+.flex-center {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.blockpadding {
+.contact-padding {
     padding-top: 10%;
-}
-
-.topmargin {
-    padding-top: 20px;
 }
 
 li a, li p, label, address {
@@ -217,7 +222,7 @@ li a, li p, label, address {
     padding-top: 40px;
 }
 
-.toppicture {
+.top-picture {
     align-self: center;
     max-height: 25%;
     max-width: 25%;
@@ -247,7 +252,7 @@ li a, li p, label, address {
     margin: 30px;
 }
 
-main button {
+.main-button {
     display: none;
 }
 
@@ -281,7 +286,7 @@ main button {
     margin: 10px;
 }
 
-.card-img {
+.card-image {
     grid-column: 2;
     grid-row: 1 / span 3;
     display: grid;
@@ -290,13 +295,13 @@ main button {
     border-radius: 5px;
 }
 
-.childpicture {
+.child-picture {
     padding-top: 40px;
     max-height: 200px;
     justify-self: center;
 }
 
-.adultpicture {
+.adult-picture, .old-picture {
     padding-top: 40px;
     max-height: 500px;
     justify-self: center;
@@ -306,11 +311,11 @@ main button {
               Main Contact
 *******************************************/
 
-.formcontainer {
+.form-container {
     padding-bottom: 8%;
 }
 
-.contactform {
+.contact-form {
     display: grid;
     color: white;
     width: 12.5rem;
@@ -334,16 +339,16 @@ input, textarea {
     font-size: 0.75rem;
 }
 
-.submitbtn {
+.submit-button {
     justify-self: center;
 }
 
-.mapcontainer {
+.map-container {
     background-image: url(img/map.jpg);
     padding: 0;
 }
 
-.card {
+.address-card {
     padding: 20px;
     margin: 15%;
 }
@@ -356,6 +361,12 @@ address {
 /***************************************
             List Index
 ***************************************/
+
+.list-container>section {
+    display: grid;
+    grid-template-rows: auto;
+    height: 200px;
+}
 
 .numbers {
     grid-row: 1;
@@ -384,12 +395,6 @@ address {
     grid-column: 1;
 }
 
-.list-container>section {
-    display: grid;
-    grid-template-rows: auto;
-    height: 200px;
-}
-
 /***********************************
        Footer Index
 ***********************************/
@@ -400,7 +405,14 @@ address {
     align-self: center;
     border: none;
     width: 100%;
-    padding: 10px;
+    padding: 20px 10px;
+}
+.takeup-button > p {
+    line-height: 0.2rem;
+}
+
+footer button:hover {
+    box-shadow: 0 2px rgb(80, 80, 80);
 }
 
 /****************************************
@@ -412,7 +424,7 @@ address {
             Page Rules  Contact
     *************************************/
 
-    .flexcenter {
+    .flex-center {
         flex-direction: row;
     }
 
@@ -480,11 +492,11 @@ address {
         overflow: hidden;
     }
 
-    .headingtext {
+    .heading-text {
         grid-column: 2;
     }
 
-    .toppicture {
+    .top-picture {
         align-self: flex-start;
         grid-row: 1;
         grid-column: 3;
@@ -513,15 +525,6 @@ address {
         list-style: none;
     }
 
-    a {
-        text-decoration: none;
-        color: rgb(169, 161, 158);
-    }
-
-    a:hover {
-        color: black;
-    }
-
     /*************************************
              Main Index DESKTOP
     *************************************/
@@ -530,12 +533,8 @@ address {
         margin: 10px;
     }
 
-    .card-image {
-        width: 90%;
-    }
-
     .index-main {
-        background: linear-gradient(180deg, rgb(119, 117, 116) 50%,rgb(250, 177, 49) 50%);
+        background: linear-gradient(180deg, rgb(169, 161, 158) 50%,rgb(250, 177, 49) 50%);
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
@@ -579,26 +578,22 @@ address {
             Main Contact Desktop
     *************************************/
 
-    .formcontainer {
+    .form-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .contactform {
+    .contact-form {
         width: 19rem;
     }
 
-    .submitbtn {
+    .submit-button {
         justify-self: right;
     }
 
     .header-container {
         align-self: flex-start;
         padding: 0 60px;
-    }
-
-    .header-container>h2 {
-        text-align: left;
     }
 
     /**********************************
@@ -614,7 +609,7 @@ address {
     /**********************************
         Map Section Contact Desktop
     ***********************************/
-    .card {
+    .address-card {
         margin: 3% 0% 17% 8%;
         padding-bottom: 70px;
     }
